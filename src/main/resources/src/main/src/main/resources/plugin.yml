@@ -1,0 +1,33 @@
+name: MinecraftChallenges
+version: 1.0.0
+main: com.example.challenges.ChallengesPlugin
+api-version: '1.20'
+commands:
+  start:
+    description: Startet oder fortsetzt die Challenge.
+    permission: challenges.admin
+    usage: /start
+  stop:
+    description: Beendet die Challenge und setzt alles zurück.
+    permission: challenges.admin
+    usage: /stop
+  pause:
+    description: Pausiert Timer und Challenges.
+    permission: challenges.admin
+    usage: /pause
+  challenge:
+    description: Hauptbefehl für Challenge-Verwaltung.
+    permission: challenges.admin
+    usage: /challenge [next|list|active|reset]
+  challengesetspawn:
+    description: Setzt den Spawn-Punkt für den Fehlschlag/Respawn.
+    permission: challenges.admin
+    usage: /challengesetspawn
+  challengespawn:
+    description: Teleportiert zum Challenge-Spawn.
+    permission: challenges.admin
+    usage: /challengespawn
+permissions:
+  challenges.admin:
+    description: Erlaubt die Steuerung aller Challenge-Befehle.
+    default: op
